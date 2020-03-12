@@ -17,7 +17,7 @@ logger.setLevel(logging.INFO)
 try:
     SHOTGUN_SCRIPT_NAME=str(os.environ['SHOTGUN_SCRIPT_NAME'])
     SHOTGUN_SCRIPT_KEY=int(os.environ['SHOTGUN_SCRIPT_KEY'])
-	SHOTGUN_HOST_NAME=str(os.environ['SHOTGUN_HOST_NAME'])	
+    SHOTGUN_HOST_NAME=str(os.environ['SHOTGUN_HOST_NAME'])	
 except Exception as e:
     raise ValueError('Error while accessing Shotgun details from environment variables')
     logger.info('Error while accessing Shotgun details from environment variables')
@@ -66,8 +66,8 @@ SHOTGUN_ATTRIBUTE_VALUE=SHOTGUN_ATTRIBUTE_VALUE.replace("-"," ")
 print(line)
 
 if count==0:
-	sg = shotgun_api3.Shotgun(SHOTGUN_HOST_NAME, SHOTGUN_SCRIPT_NAME, SHOTGUN_SCRIPT_KEY)
-	sg.create("Reply", {"entity": {"type": "Delivery", "id": entity_id},"content": "AWS Copy Started..."})
+    sg = shotgun_api3.Shotgun(SHOTGUN_HOST_NAME, SHOTGUN_SCRIPT_NAME, SHOTGUN_SCRIPT_KEY)
+    sg.create("Reply", {"entity": {"type": "Delivery", "id": entity_id},"content": "AWS Copy Started..."})
 					
 
 def copy_to_vfx_vendor_test(source_bucket_key, destination_bucket_key, source_bucket_name, destination_bucket_name):
