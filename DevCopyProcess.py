@@ -16,7 +16,7 @@ logger.setLevel(logging.INFO)
 
 try:
     SHOTGUN_SCRIPT_NAME=str(os.environ['SHOTGUN_SCRIPT_NAME'])
-    SHOTGUN_SCRIPT_KEY=int(os.environ['SHOTGUN_SCRIPT_KEY'])
+    SHOTGUN_SCRIPT_KEY=str(os.environ['SHOTGUN_SCRIPT_KEY'])
     SHOTGUN_HOST_NAME=str(os.environ['SHOTGUN_HOST_NAME'])	
 except Exception as e:
     raise ValueError('Error while accessing Shotgun details from environment variables')
