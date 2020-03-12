@@ -67,7 +67,7 @@ print(line)
 
 if count==0:
     sg = shotgun_api3.Shotgun(SHOTGUN_HOST_NAME, SHOTGUN_SCRIPT_NAME, SHOTGUN_SCRIPT_KEY)
-    sg.create("Reply", {"entity": {"type": SHOTGUN_ENTITY_TYPE, "id": SHOTGUN_ENTITY_ID},"content": "AWS Copy Started..."})
+    sg.create("Reply", {"entity": {"type": SHOTGUN_ENTITY_TYPE, "id": int(SHOTGUN_ENTITY_ID)},"content": "AWS Copy Started..."})
 					
 
 def copy_to_vfx_vendor_test(source_bucket_key, destination_bucket_key, source_bucket_name, destination_bucket_name):
