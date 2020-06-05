@@ -32,7 +32,7 @@ else:
 
 logger.info("Count: {}".format(count))
 
-BUCKET = 'aws-batch-parameters'
+BUCKET = 'aws-batch-parameter'
 KEY = str(sys.argv[1])
 session = boto3.Session()
 
